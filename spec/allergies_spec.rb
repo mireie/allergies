@@ -15,4 +15,8 @@ describe("#allergies") do
     score = Allergies.new(3)
     expect(score.find_allergies).to(eq(["peanuts", "eggs"]))
   end
+  it("returns all allergies with a score of 255") do
+    score = Allergies.new(255)
+    expect(score.find_allergies).to(eq(["cats", "pollen", "chocolate", "tomatoes", "strawberries", "shellfish", "peanuts", "eggs"]))
+  end
 end

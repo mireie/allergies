@@ -9,7 +9,7 @@ class Allergies
     allergy_list = ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
     allergy_array = []
     working_score = @score
-    if @score > 255
+    if @score > 255 || @score < 1
       return "Woah, you're allergic to some powerful stuff!"
     else
       until working_score === 0
